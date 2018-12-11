@@ -4,9 +4,13 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "font-awesome": "^4.7.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
+    "react-redux": "^5.1.1",
+    "react-scripts": "2.0.5",
+    "redux": "^4.0.1",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,5 +26,17 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "description": "Create a simple component that renders a bell icon. The component should display notifications count as a badge over the icon. If the count is zero, the count badge should be hidden. If the count is more than 9, then the string '9+' should be displayed instead of the actual count.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teefouad/levelup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teefouad/levelup/issues"
+  },
+  "homepage": "https://github.com/teefouad/levelup#readme"
 }

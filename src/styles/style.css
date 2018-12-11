@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700,800");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  background: #f0f0f0;
+  margin: 0;
+}
+.counter {
+  display: flex;
+  align-items: center;
+}
+.counter .counter__count {
+  color: #fff;
+  background-color: #1fbcd2;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  margin-right: 5px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.counter__chart {
+  position: relative;
+  display: inline-block;
+}
+.counter__chart svg {
+  height: 60px;
+  width: 60px;
+}
+.counter__chart circle {
+  fill: transparent;
+  stroke-width: 5px;
+  transition: 0.5s all ease-in-out;
+}
+.counter__chart circle:first-of-type {
+  stroke: #e6e6e6;
+}
+.counter__chart circle:last-of-type {
+  stroke: #1fbcd2;
+  stroke-linecap: round;
+  stroke-dashoffset: 0;
+}
+.counter__chart i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #1fbcd2;
+  font-size: 25px;
+  transform: translate(-50%, -50%);
+}
+/**Rating**/
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fecb2f;
+}
+.rating span {
+  position: relative;
+  margin-right: 5px;
+}
+.rating i {
+  color: #f0f0f0;
+  font-size: 23px;
+}
+.rating i.fa-star-half {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.rating i[data-active="true"],
+.rating i.fa-star-half {
+  color: #fecb2f;
+}
+.rating span.num {
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+/**Buton**/
+button {
+  background: #1fbcd2;
+  border-radius: 5px;
+  border: 0px;
+  padding: 0;
+  display: table;
+  font-family: inherit;
+  font-weight: 700;
+}
+button .fa {
+  display: table-cell;
+  color: #fff;
+  background: #1db4c9;
+  padding: 10px;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+button .fa::before {
+  font-size: 23px;
+}
+button span {
+  color: #fff;
+  text-transform: capitalize;
+  padding: 10px;
+  font-size: 16px;
+  display: table-cell;
+  vertical-align: middle;
+}
+/**Simple Card**/
+.simple-card {
+  position: relative;
+  display: inline-block; /*for now*/
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 15px;
+  max-width: 360px;
+}
+.simple-card img {
+  display: block;
+  width: 100%;
+}
+.simple-card .overlay {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(29, 180, 201, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  -moz-transition: top 0.3s ease;
+  -o-transition: top 0.3s ease;
+  transition: top 0.3s ease;
+}
+.simple-card h1 {
+  color: #fff;
+  width: 65%;
+  font-size: 30px;
+  line-height: 1.5;
+  margin: 0 0 45px;
+  text-align: center;
+}
+.simple-card .rating {
+  margin-bottom: 45px;
+}
+.simple-card:hover .overlay {
+  top: 0;
+}
+/**Fancy Card**/
+.fancy-card {
+  position: relative;
+  max-width: 400px;
+}
+.fancy-card__details {
+  background: #fff;
+  border-radius: 17px;
+  padding: 40% 40px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -40%;
+}
+.fancy-card .flip-div {
+  padding: 0px 30px;
+}
+.fancy-card img {
+  transform: rotateY(0deg);
+   width: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+.fancy-card:hover img {
+  transform: rotateY(180deg);
+}
+.fancy-card h1 {
+  font-size: 18px;
+  margin: 25px 0px;
+}
+.fancy-card .rating {
+  margin-bottom: 25px;
+}
+/**title**/
+.title {
+  background-color: #00bcd5;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  text-transform: capitalize;
+  padding: 20px 0px;
+  margin-bottom: 30px;
+}
